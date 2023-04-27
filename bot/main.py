@@ -50,7 +50,7 @@ async def chexk_group(_, client, query):
 async def help(client, message):
     print(client)
     print(message)
-    text = '''
+    text = "
 直接发送磁力链接可直接添加任务，默认上传网盘，支持多个磁力（换行分隔）
 直接发送图片可进行搜图    
 ********** pixiv相关 **********
@@ -123,7 +123,7 @@ searchsong - 搜索网易云音乐歌曲
 playlist - 获取歌单信息，后加歌单id
 示例 /playlist 5320586978
 
-Bot相关联系：https://t.me/Ben_chao'''
+Bot相关联系：https://t.me/Ben_chao "
     try:
         await client.send_message(chat_id=int(message.chat.id), text=text)
     except Exception as e:
